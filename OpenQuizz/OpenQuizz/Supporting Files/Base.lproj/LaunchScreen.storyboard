@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Balham.otf">
+            <string>Balham</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="e6k-Ft-hgw">
+                                <rect key="frame" x="86.5" y="303" width="241" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="azJ-yo-zCL"/>
+                                    <constraint firstAttribute="width" secondItem="e6k-Ft-hgw" secondAttribute="height" multiplier="241:290" id="yev-zG-Cdk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPad Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsk-lk-2XS">
+                                <rect key="frame" x="334" y="1093" width="166" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="8Kl-aa-I2h"/>
+                                    <constraint firstAttribute="height" constant="61" id="VjM-Vr-zRi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Kl-aa-I2h"/>
+                                        <exclude reference="VjM-Vr-zRi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="8Kl-aa-I2h"/>
+                                        <include reference="VjM-Vr-zRi"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2901960784" green="0.3411764706" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e6k-Ft-hgw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1bs-I7-mXv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nsk-lk-2XS" secondAttribute="bottom" constant="20" id="1jU-9M-WNP"/>
+                            <constraint firstItem="e6k-Ft-hgw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4UO-nV-cf2"/>
+                            <constraint firstItem="nsk-lk-2XS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hu6-DR-7Td"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nsk-lk-2XS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1jU-9M-WNP"/>
+                                <exclude reference="hu6-DR-7Td"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="nsk-lk-2XS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1jU-9M-WNP"/>
+                                <include reference="hu6-DR-7Td"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Loading" width="241" height="290"/>
+    </resources>
+</document>

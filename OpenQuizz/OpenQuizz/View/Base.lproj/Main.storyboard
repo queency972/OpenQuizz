@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Balham.otf">
+            <string>Balham</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bI-dc-EXX">
+                                <rect key="frame" x="87.5" y="567" width="200" height="80"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.55294117649999996" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="X1x-B6-MH9">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="80" id="krt-ia-5FE">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="46"/>
+                                </variation>
+                                <connections>
+                                    <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVd-1T-7Zd"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="imB-QH-W4L">
+                                <rect key="frame" x="169" y="588.5" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="e64-h1-mqV"/>
+                                    <constraint firstAttribute="height" constant="37" id="hxN-Sy-MDf"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwm-do-L4N" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
+                                <rect key="frame" x="65" y="0.0" width="245" height="245"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="zR7-wM-xq1">
+                                        <rect key="frame" x="104.5" y="202" width="36" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zR7-wM-xq1" secondAttribute="height" multiplier="36:35" id="7Ic-re-HfJ"/>
+                                            <constraint firstAttribute="width" constant="36" id="Nmd-v4-71b">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ou se cache donc marsupilani ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRa-Oc-YIJ">
+                                        <rect key="frame" x="8" y="8" width="229" height="229"/>
+                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="46"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rwm-do-L4N" secondAttribute="height" multiplier="1:1" id="9wy-cp-D1g"/>
+                                    <constraint firstAttribute="bottom" secondItem="zR7-wM-xq1" secondAttribute="bottom" constant="8" id="AoZ-wn-U4v"/>
+                                    <constraint firstItem="fRa-Oc-YIJ" firstAttribute="leading" secondItem="rwm-do-L4N" secondAttribute="leading" constant="8" id="DVA-Z4-57c"/>
+                                    <constraint firstAttribute="trailing" secondItem="fRa-Oc-YIJ" secondAttribute="trailing" constant="8" id="Ev9-ws-i0g"/>
+                                    <constraint firstItem="zR7-wM-xq1" firstAttribute="centerX" secondItem="rwm-do-L4N" secondAttribute="centerX" id="FXI-yn-ATG"/>
+                                    <constraint firstAttribute="bottom" secondItem="fRa-Oc-YIJ" secondAttribute="bottom" constant="8" id="JlO-KI-b3I"/>
+                                    <constraint firstItem="fRa-Oc-YIJ" firstAttribute="top" secondItem="rwm-do-L4N" secondAttribute="top" constant="8" id="cge-xV-idK"/>
+                                    <constraint firstAttribute="width" constant="245" id="yjL-6K-Y2f">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="480"/>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <outlet property="icon" destination="zR7-wM-xq1" id="mIK-vv-Noo"/>
+                                    <outlet property="label" destination="fRa-Oc-YIJ" id="lV7-4u-mLG"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uZ-gH-fj2">
+                                <rect key="frame" x="37.5" y="286" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="6Xc-i6-dCT"/>
+                                    <constraint firstAttribute="height" constant="60" id="O3o-Sb-85y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.083928205062290817" blue="0.042442994716510363" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="6Xc-i6-dCT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="60"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2901960784" green="0.3411764706" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rwm-do-L4N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FbK-1R-CgB"/>
+                            <constraint firstItem="3bI-dc-EXX" firstAttribute="bottom" secondItem="rwm-do-L4N" secondAttribute="bottom" id="Gfz-yp-3Qz"/>
+                            <constraint firstItem="8uZ-gH-fj2" firstAttribute="top" secondItem="rwm-do-L4N" secondAttribute="top" id="J5M-D5-ek4"/>
+                            <constraint firstItem="3bI-dc-EXX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="447" id="X7J-0P-if3"/>
+                            <constraint firstItem="eyv-ih-aum" firstAttribute="bottom" secondItem="3bI-dc-EXX" secondAttribute="bottom" constant="20" id="Xc5-cf-iAE"/>
+                            <constraint firstItem="3bI-dc-EXX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YOH-zz-xYR"/>
+                            <constraint firstItem="rwm-do-L4N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aoZ-Sd-tFe"/>
+                            <constraint firstItem="eyv-ih-aum" firstAttribute="trailing" secondItem="8uZ-gH-fj2" secondAttribute="trailing" constant="20" id="d0M-g8-CEQ"/>
+                            <constraint firstItem="3bI-dc-EXX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gSv-12-tPC"/>
+                            <constraint firstItem="imB-QH-W4L" firstAttribute="centerY" secondItem="3bI-dc-EXX" secondAttribute="centerY" id="jOi-kk-13M"/>
+                            <constraint firstItem="3bI-dc-EXX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kyQ-bh-F3Q"/>
+                            <constraint firstItem="rwm-do-L4N" firstAttribute="leading" secondItem="eyv-ih-aum" secondAttribute="leading" constant="20" id="lPy-BX-g0g"/>
+                            <constraint firstItem="rwm-do-L4N" firstAttribute="top" secondItem="eyv-ih-aum" secondAttribute="top" id="oGg-T5-4a1"/>
+                            <constraint firstItem="3bI-dc-EXX" firstAttribute="bottom" secondItem="rwm-do-L4N" secondAttribute="bottom" id="uOn-mO-61R"/>
+                            <constraint firstItem="8uZ-gH-fj2" firstAttribute="centerX" secondItem="eyv-ih-aum" secondAttribute="centerX" id="ufs-Jc-pVh"/>
+                            <constraint firstItem="imB-QH-W4L" firstAttribute="centerX" secondItem="3bI-dc-EXX" secondAttribute="centerX" id="upP-XS-LE6"/>
+                            <constraint firstItem="8uZ-gH-fj2" firstAttribute="top" secondItem="fRa-Oc-YIJ" secondAttribute="bottom" constant="49" id="wC3-QO-RZm"/>
+                            <constraint firstItem="8uZ-gH-fj2" firstAttribute="width" secondItem="3bI-dc-EXX" secondAttribute="width" id="yo8-GT-0QN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eyv-ih-aum"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="d0M-g8-CEQ"/>
+                                <exclude reference="aoZ-Sd-tFe"/>
+                                <exclude reference="lPy-BX-g0g"/>
+                                <exclude reference="J5M-D5-ek4"/>
+                                <exclude reference="yo8-GT-0QN"/>
+                                <exclude reference="Gfz-yp-3Qz"/>
+                                <exclude reference="X7J-0P-if3"/>
+                                <exclude reference="gSv-12-tPC"/>
+                                <exclude reference="kyQ-bh-F3Q"/>
+                                <exclude reference="uOn-mO-61R"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Xc5-cf-iAE"/>
+                                <include reference="d0M-g8-CEQ"/>
+                                <include reference="aoZ-Sd-tFe"/>
+                                <include reference="lPy-BX-g0g"/>
+                                <exclude reference="oGg-T5-4a1"/>
+                                <include reference="J5M-D5-ek4"/>
+                                <exclude reference="ufs-Jc-pVh"/>
+                                <exclude reference="wC3-QO-RZm"/>
+                                <include reference="yo8-GT-0QN"/>
+                                <exclude reference="Gfz-yp-3Qz"/>
+                                <include reference="X7J-0P-if3"/>
+                                <exclude reference="YOH-zz-xYR"/>
+                                <include reference="gSv-12-tPC"/>
+                                <exclude reference="kyQ-bh-F3Q"/>
+                                <include reference="uOn-mO-61R"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="imB-QH-W4L" id="ia3-6j-7UV"/>
+                        <outlet property="newGameButton" destination="3bI-dc-EXX" id="uWj-te-aan"/>
+                        <outlet property="questionView" destination="rwm-do-L4N" id="ayB-br-MRf"/>
+                        <outlet property="scoreLabel" destination="8uZ-gH-fj2" id="Kdd-LS-Dea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2306" y="-308"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon Correct" width="36" height="35"/>
+    </resources>
+</document>
